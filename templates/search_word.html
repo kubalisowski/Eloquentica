@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+    <div id="container">
+
+        {% include 'header.html' %}
+        {% include 'leftpanel.html' %}
+
+        <div id="main-panel">
+            <div id="main">
+                <h3>{{ word_check['word'] }}</h><br/>
+            </div>
+            <div id="word-details">
+                <b>definition:</b> {{ word_check['definition'] }}<br/>
+                <b>synonyms: </b>
+                {% for s in synonyms %}
+                {% if loop.last %}
+                {{ s }}
+                {% else %}
+                {{ s }},
+                {% endif %}
+                {% endfor %}<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </div>
+			<br/>
+        </div>
+
+        {% include 'footer.html' %}
+
+    </div>
+</body>
+</html>

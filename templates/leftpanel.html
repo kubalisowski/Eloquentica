@@ -1,0 +1,24 @@
+<div id="left-panel">
+    <form method="POST">
+        <p id="search-bar">
+        {{ searchform.hidden_tag() }}
+        {{ searchform.search(size=25) }}
+        </p>
+        <p id="search-button">
+        <input id="submit" name="submit" type="submit" value="Find it!">
+		<!--{{ searchform.submit() }}-->
+        </p>
+    </form> <br/>
+
+    <form action="/addword">
+        <input type="submit" value="Add word"/>
+    </form> <br/>
+
+    <form action="/info">
+        <input type="submit" value="Info"/>
+    </form><br/>
+
+    <form action="/logout">
+        <input type="submit" value="Logout"/>
+    </form>
+</div>

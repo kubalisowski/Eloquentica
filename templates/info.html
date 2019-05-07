@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+    <div id="container">
+
+        {% include 'header.html' %}
+        {% include 'leftpanel.html' %}
+
+        <div id="main-panel">
+			<div id="main">
+				<br/><br/>
+                <b>WHAT IS <i>Eloquentica</i> ?</b><br/>
+                The idea of <i>Eloquentica</i> is to create a database of eloquentive (not casual) words with their synonyms.<br/><br/>
+                <b>HOW TO SEARCH FOR WORDS ?</b><br/>
+                Type a word (or synonym) that you are looking for in the text bar and hit 'Find it!' button.
+                It will look for certain word in first instance, if not found it will look for synonyms. As a final result, all words with matching synonym will be displayed.<br/><br/>
+                <b>HOW TO ADD WORDS ?</b><br/>
+                Hit 'Add word' button. Provide 'word', 'definition' and 'synonyms'.<br/>
+				IMPORTANT! separate synonyms by ',' comma! If you will not separate them, they will be treated as one word.
+				<br/><br/><br/>
+			</div>
+        </div>
+
+        {% include 'footer.html' %}
+
+    </div>
+</body>
+</html>

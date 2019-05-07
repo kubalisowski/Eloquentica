@@ -1,0 +1,35 @@
+{% include 'head.html' %}
+<div id="index-container">
+    <div id="index-logo">
+        <h1><b>Eloquentica</b></h1>
+    </div><br/>
+    <div id="login-panel">
+        <form method="post">
+        {{ loginform.hidden_tag() }}
+            <p>
+                <!--{{ loginform.username.label }}<br>-->
+                <b>USERNAME</b><br/>
+                {{ loginform.username(size=32) }}
+            </p>
+            <p>
+                <!--{{ loginform.password.label }}<br>-->
+                <b>PASSWORD</b><br/>
+                {{ loginform.password(size=32) }}
+            </p>
+            <p>
+                {{ loginform.remember() }}
+                {{ loginform.remember.label }}
+            </p>
+            <p>
+                {{ loginform.submit() }}
+            </p>
+        </form>
+        <form action="/register">
+            <input type="submit" value="register">
+        </form>
+    </div>
+    <div id="index-footer">
+        <b>Created by Kuba Lisowski</b><br/>
+		kubalisowski94@gmail.com
+    </div>
+</div>

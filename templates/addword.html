@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+    <div id="container">
+
+        {% include 'header.html' %}
+        {% include 'leftpanel.html' %}
+
+        <div id="main-panel">
+			<div id="main">
+				<br/>
+				<form method="post">
+					{{ addform.hidden_tag() }}
+					<p>
+						{{ addform.word.label }}<br/>
+						{{ addform.word(size=32) }}
+					</p>
+					<p>
+						{{ addform.definition.label }}<br/>
+						{{ addform.definition(size=32) }}
+					</p>
+					<p>
+						{{ addform.synonym.label }}<br/>
+						{{ addform.synonym(size=32) }}
+					</p>
+					<p>
+						{{ addform.submit() }}
+					</p>
+				</form>
+				<br/><br/>
+			</div>
+        </div>
+
+        {% include 'footer.html' %}
+
+    </div>
+</body>
+</html>

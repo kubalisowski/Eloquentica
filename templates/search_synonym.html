@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+    <div id="container">
+
+        {% include 'header.html' %}
+        {% include 'leftpanel.html' %}
+
+        <div id="main-panel">
+            {% for a in all_words %}
+            <div id="main">
+                <h3>{{ a['word'] }}</h>
+            </div>
+            <div id="word-details">
+                <b>definition:</b> {{ a['definition'] }}<br/>
+                <b>synonyms: </b>
+                {% for s in synonyms_in_groups %}
+                    {% if s['word_id'] == a['word_id'] %}
+                        {% if loop.last %}
+                            {{ s['synonym'] }}
+                        {% else %}
+                        {{ s['synonym'] }}, &nbsp;
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% endfor %}
+			<br/><br/><br/>
+        </div>
+
+        {% include 'footer.html' %}
+
+    </div>
+</body>
+</html>
